@@ -1,0 +1,18 @@
+/* put your styles here */
+body {
+  margin: 12px 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+}
+
+.fa:hover,
+.fas:hover {
+  color: red;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+input:hover,
+input:focus {
+  height: 20px;
+}

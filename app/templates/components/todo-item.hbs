@@ -1,0 +1,17 @@
+<form>
+  <fieldset>
+    <legend></legend>
+    <label for="addItem">Add item</label><br>
+      {{ input id = "addItem" value=todoItem }}
+      <button aria-controls="item-list" aria-label="Save Item" type="submit" tabindex=0 {{ action "addItem" }}>Add<i alt="Add" class="fa-icon fa fa-plus"></i></button>
+  </fieldset>
+</form>
+
+  <ul id="item-list" role="region" aria-live="assertive" aria-atomic="false" aria-relevant="additions removals">
+    {{#each todoList as |todoItem index| }}
+		<li tabindex=0>{{ todoItem.name }}<br>
+      <button tabindex=0 aria-label="Edit" {{ action "editItem" index todoItem }}>edit<i alt="Edit" class="fa-icon fa fa-edit" ></i></button>
+    <button tabindex=0 aria-label="Delete"  {{ action "deleteItem" index }}>Delete<i alt="Delete" class="fas fa-trash-alt"></i></button>
+    </li >
+  {{/each}}
+</ul >
